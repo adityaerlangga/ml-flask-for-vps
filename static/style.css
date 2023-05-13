@@ -1,0 +1,195 @@
+@import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css');
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+html,
+body,
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-size: 16px;
+	font-family: Roboto, sans-serif;
+}
+
+html,
+body {
+	height: 100%;
+	text-align: center;
+}
+
+body {
+	background: #f8f8f8;
+}
+
+
+a {
+	color: white;
+	text-decoration: none;
+}
+
+h2 {
+	font-family: "Roboto", sans-serif;
+	font-size: 26px;
+	line-height: 1;
+	color: #454cad;
+	margin-bottom: 0;
+}
+
+p {
+	font-family: "Roboto", sans-serif;
+	font-size: 18px;
+	color: #5f6982;
+}
+
+button {
+	background-color: #454cad;
+	/* Green */
+	border: none;
+	color: white;
+	padding: 15px 32px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+}
+
+input {
+	margin-top: 20px;
+	margin-bottom: 20px;
+	background-color: #454cad;
+	color: white;
+	padding: 10px 30px;
+	border-radius: 5px;
+}
+
+.nav {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	height: 50px;
+	background-color: #454cad;
+	align-items: center;
+}
+
+.nav li {
+	float: right;
+	font-weight: bold;
+	line-height: 50px;
+}
+
+.nav .left-side {
+	float: left;
+	margin-left: 0;
+	margin-right: -15px;
+}
+
+.nav .right-side {
+	margin-right: 5%;
+}
+
+.nav img {
+	height: 50px;
+	margin-right: 10px;
+	padding: 7px;
+}
+
+.nav .first-left{
+	margin-left: 50px;
+	margin-right: 5px;
+}
+
+.submit-button {
+	margin: 0 auto;
+}
+
+.form {
+	margin-bottom: 10px;
+}
+
+.grid-image {
+	display: flex;
+	flex-direction: row;
+}
+
+.model-1 {
+	flex: 1;
+	border: 3px solid black;
+	background-color: #454cad;
+}
+  
+.model-2 {
+	flex: 1;
+	border: 3px solid black;
+	background-color: #6c75eb;
+}
+
+.model-3 {
+	flex: 1;
+	border: 3px solid black;
+	background-color: #6c75eb;
+}
+
+.model-4 {
+	flex: 1;
+	border: 3px solid black;
+	background-color: #454cad;
+}
+
+.img-prediction {
+	padding: 20px;
+	height: 400px;
+	width: 400px;
+	border-radius: 25px;
+}
+
+.prediction {
+	margin-bottom: 20px;
+	padding-bottom: 10px;
+	color: white;
+}
+
+.model-title {
+	margin-top: 20px;
+	color: white;
+}
+
+table {
+	border-collapse: collapse;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-bottom: 30px;
+	
+}
+
+th,
+td {
+	border: 5px solid #acacac;
+	padding: 10px 15px;
+}
+
+tr:nth-child(odd) {
+	background: #ffffff;
+}
+
+tr:nth-child(even) {
+	background: #e5e5e5;
+}
+
+tr:hover {
+	background: #d1d1d1;
+}
+
+.percentage-label {
+	text-align: right;
+}
+.percentage-result {
+	text-align: left;
+}
+
+.title-website {
+	margin-bottom: 20px;
+	margin-top: 20px;
+}

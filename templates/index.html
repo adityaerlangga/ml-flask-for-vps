@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>COVID, TBC, Pneumonia Detection</title>
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+  <ul class="nav">
+    <li class="right-side"><a href="https://convertio.co/dcm-jpg/" target="__blank">DCM to IMG</a></li>
+    <li class="right-side"><a href="#">Predict Model</a></li>
+    <li class="left-side first-left"><img src="{{ url_for('static', filename='logo.png') }}" alt="" class="unsri-logo"></li>
+    <li class="left-side"><a href="">Image Classification</a></li>
+  </ul>
+  <h2 class="title-website">Image Classification</h2>
+  <!-- Upload  -->
+  <div class="form">
+    <form action="/submit" method="post" enctype="multipart/form-data">
+      <input type="file" name="my_image" accept="image/*">
+      <div class="submit-button">
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </div>
+    </form>
+  </div>
+  <div class="grid-image">
+    {% if prediction1 %}
+    <div class="model-1">
+      <h2 class="model-title"> MODEL {{ model1_name }} </h2>
+      <img src="{{ img_path }}" class="img-prediction">
+      <h2 class="prediction"> Prediction : <i> {{ prediction1 }} </i></h2>
+      <h2 class="prediction" style="margin-top: -20px;"> Hasil : <i> {{ label1 }} </i></h2>
+      <table class="my_table">
+        <tr>
+          <td class="percentage-label">Filename:</td>
+          <td class="percentage-result">{{ filename }}</td>
+        </tr>
+        <tr>
+          <td class="percentage-label">COVID-19 (%):</td>
+          <td class="percentage-result">{{ probabilitas1[0] }} %</td>
+        </tr>
+        <tr>
+          <td class="percentage-label">NORMAL (%):</td>
+          <td class="percentage-result">{{ probabilitas1[1] }} %</td>
+        </tr>
+        <tr>
+          <td class="percentage-label">PNEUMONIA (%):</td>
+          <td class="percentage-result">{{ probabilitas1[2] }} %</td>
+        </tr>
+        <tr>
+          <td class="percentage-label">TBC (%):</td>
+          <td class="percentage-result">{{ probabilitas1[3] }} %</td>
+        </tr>
+      </table>
+    </div>
+    {% endif %}
+    {% if prediction2 %}
+    <div class="model-2">
+      <h2 class="model-title"> MODEL {{ model2_name }} </h2>
+      <img src="{{ img_path }}" class="img-prediction">
+      <h2 class="prediction"> Prediction : <i> {{ prediction2 }} </i></h2>
+      <h2 class="prediction" style="margin-top: -20px;"> Hasil : <i> {{ label2 }} </i></h2>
+      <table class="my_table">
+        <tr>
+          <td class="percentage-label">Filename:</td>
+          <td class="percentage-result">{{ filename }}</td>
+        </tr>
+        <tr>
+          <td class="percentage-label">COVID-19 (%):</td>
+          <td class="percentage-result">{{ probabilitas2[0] }} %</td>
+        </tr>
+        <tr>
+          <td class="percentage-label">NORMAL (%):</td>
+          <td class="percentage-result">{{ probabilitas2[1] }} %</td>
+        </tr>
+        <tr>
+          <td class="percentage-label">PNEUMONIA (%):</td>
+          <td class="percentage-result">{{ probabilitas2[2] }} %</td>
+        </tr>
+        <tr>
+          <td class="percentage-label">TBC (%):</td>
+          <td class="percentage-result">{{ probabilitas2[3] }} %</td>
+        </tr>
+      </table>
+    </div>
+    {% endif %} 
+  </div>
+  <div class="grid-image">
+    {% if prediction3 %}
+    <div class="model-3">
+      <h2 class="model-title"> MODEL {{ model3_name }} </h2>
+      <img src="{{ img_path }}" class="img-prediction">
+      <h2 class="prediction"> Prediction : <i> {{ prediction3 }} </i></h2>
+      <h2 class="prediction" style="margin-top: -20px;"> Hasil : <i> {{ label3 }} </i></h2>
+      <table class="my_table">
+        <tr>
+          <td class="percentage-label">Filename:</td>
+          <td class="percentage-result">{{ filename }}</td>
+        </tr>
+        <tr>
+          <td class="percentage-label">COVID-19 (%):</td>
+          <td class="percentage-result">{{ probabilitas3[0] }} %</td>
+        </tr>
+        <tr>
+          <td class="percentage-label">NORMAL (%):</td>
+          <td class="percentage-result">{{ probabilitas3[1] }} %</td>
+        </tr>
+        <tr>
+          <td class="percentage-label">PNEUMONIA (%):</td>
+          <td class="percentage-result">{{ probabilitas3[2] }} %</td>
+        </tr>
+        <tr>
+          <td class="percentage-label">TBC (%):</td>
+          <td class="percentage-result">{{ probabilitas3[3] }} %</td>
+        </tr>
+      </table>
+    </div>
+    {% endif %}
+    {% if prediction4 %}
+    <div class="model-4">
+      <h2 class="model-title"> MODEL {{ model4_name }} </h2>
+      <img src="{{ img_path }}" class="img-prediction">
+      <h2 class="prediction"> Prediction : <i> {{ prediction4 }} </i></h2>
+      <h2 class="prediction" style="margin-top: -20px;"> Hasil : <i> {{ label4 }} </i></h2>
+      <table class="my_table">
+        <tr>
+          <td class="percentage-label">Filename:</td>
+          <td class="percentage-result">{{ filename }}</td>
+        </tr>
+        <tr>
+          <td class="percentage-label">COVID-19 (%):</td>
+          <td class="percentage-result">{{ probabilitas4[0] }} %</td>
+        </tr>
+        <tr>
+          <td class="percentage-label">NORMAL (%):</td>
+          <td class="percentage-result">{{ probabilitas4[1] }} %</td>
+        </tr>
+        <tr>
+          <td class="percentage-label">PNEUMONIA (%):</td>
+          <td class="percentage-result">{{ probabilitas4[2] }} %</td>
+        </tr>
+        <tr>
+          <td class="percentage-label">TBC (%):</td>
+          <td class="percentage-result">{{ probabilitas4[3] }} %</td>
+        </tr>
+      </table>
+    </div>
+    {% endif %}
+    
+  </div>
+</body>
+
+</html>
